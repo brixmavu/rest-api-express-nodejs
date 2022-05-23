@@ -161,7 +161,6 @@ module.exports = {
 
 ```js
 // In /controllers/apiController.js
-// *** ADD ***
 const apiService = require("../services/apiService");
 
 const getAllItems = (req, res) => {
@@ -248,48 +247,32 @@ module.exports = {
 
 ```js
 // In src/database/Workout.js
-const DB = require("./db.json");
 
 const getAllItems = () => {
   return DB;
 };
-
-module.exports = { getAllItems };
 ```
 
 ```js
 // In src/database/itemService.js
-const Item = require("../database/Item");
+
 const getAllItems = () => {
   const allItems = Item.getAllItems();
   return allItems;
 };
 
-module.exports = { getAllItems };
 ```
 
 ```js
 // In src/controllers/itemControllers.js
-const itemService = require("../services/itemService");
 
 const getAllItems = (req, res) => {
   const allItems = itemService.getAllItems();
   res.send({ status: "OK", data: allItems });
 };
 
-module.exports = { getAllItems };
 ```
 
-```js
-var express = require('express');
-var router = express.Router();
-const itemController = require("../../controllers/itemControllers");
-
-router.get("/", itemController.getAllItems);
-
-module.exports = router;
-
-```
 #TODO show the results in browser
 
 # Create single item collection
