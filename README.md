@@ -61,11 +61,6 @@ touch db.json Item.js
 │   ├── db.json
 │   └── Items.js
 ├── package.json
-├── public
-│   ├── images
-│   ├── javascripts
-│   └── stylesheets
-│       └── style.css
 ├── routes
 │   ├── index.js
 │   └── users.js
@@ -73,7 +68,7 @@ touch db.json Item.js
       └── apiService.js
  
 
-8 directories, 8 files
+6 directories, 7 files
 
 ```
 
@@ -297,7 +292,7 @@ module.exports = router;
 ```
 #TODO show the results in browser
 
-### Speed up the process
+# Create single item collection
 ```js
 
 ```
